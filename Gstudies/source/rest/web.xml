@@ -1,0 +1,13 @@
+<servlet>
+
+    <servlet-mapping>
+        <servlet-name>Donate</servlet-name>
+        <url-pattern>/donate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Donate</servlet-name>
+        <servlet-class>com.donateBooks</servlet-class>
+    </servlet>
+
+</servlet>
