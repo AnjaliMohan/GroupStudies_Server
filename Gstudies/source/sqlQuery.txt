@@ -1,0 +1,6 @@
+//Query to create a table Donate Books
+
+create table donatebooks(book_id int NOT NULL PRIMARY KEY AUTO_INCREMENT,user_id varchar(10) NOT NULL,book_name varchar(10) NOT NULL,selection_year varchar(10) NOT NULL,publisher_name varchar(10) NOT NULL,author_name varchar(10) NOT NULL,
+edition_no varchar(10) NOT NULL,book_availability varchar(10) NOT NULL,notes varchar(10) NOT NULL);
+
+// Please create a database with name test and run the above query in it.

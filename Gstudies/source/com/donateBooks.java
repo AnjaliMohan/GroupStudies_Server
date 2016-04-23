@@ -15,6 +15,7 @@
         static final String PASS = "";
 
         public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
+            String book_id=request.getParameter("book_id")
             String user_id=request.getParameter("user_id");
             String book_name=request.getParameter("book_name");
             String selection_year=request.getParameter("selection_year");
@@ -31,13 +32,13 @@
             try {
                 Class.forName(JDBC_DRIVER);
                 conn = DriverManager.getConnection(DB_URL, USER, PASS);
-                String sql = "INSERT INTO donatebooks VALUES("+user_id+","+book_name+","+selection_year+","+publisher_name+","+author_name+","+edition_no+","+book_availaility+","+notes+")";
+                String sql = "INSERT INTO donatebooks VALUES("+book_id+","+user_id+","+book_name+","+selection_year+","+publisher_name+","+author_name+","+edition_no+","+book_availaility+","+notes+")";
                 smt = conn.createStatement();
                 smt.executeQuery(sql);
             }
             catch (Exception e)
             {
-
+                System.out.println("Error adding book to database")
             }
 
         }
