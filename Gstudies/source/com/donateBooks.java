@@ -32,6 +32,7 @@
             try {
                 Class.forName(JDBC_DRIVER);
                 conn = DriverManager.getConnection(DB_URL, USER, PASS);
+                //query to update the row in donatebooks table
                 String sql = "INSERT INTO donatebooks VALUES("+book_id+","+user_id+","+book_name+","+selection_year+","+publisher_name+","+author_name+","+edition_no+","+book_availaility+","+notes+")";
                 smt = conn.createStatement();
                 smt.executeQuery(sql);
