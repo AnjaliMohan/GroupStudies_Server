@@ -15,6 +15,7 @@
         static final String PASS = "";
 
         public void doGet(HttpServletRequest request,HttpServletResponse response)throws IOException,ServletException{
+            String book_id=request.getParameter("book_id")
             String user_id=request.getParameter("user_id");
             String book_name=request.getParameter("book_name");
             String selection_year=request.getParameter("selection_year");
@@ -37,7 +38,7 @@
             }
             catch (Exception e)
             {
-
+                System.out.println("Error adding book to database")
             }
 
         }
